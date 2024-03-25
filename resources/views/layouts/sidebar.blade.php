@@ -1,23 +1,22 @@
-    
-    
-    <!-- Sidebar -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <div class="sidebar">
-        <!-- Brand Logo -->
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-      <i class="fa-solid fa-book-open"></i>
-      <span class="brand-text font-weight-light"><b>Library Management</b></span>
+    <i class="nav-icon fas fa-book-open"></i>
+      <span class="brand-text font-weight-light"><b>Library</b></span>
     </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="public/Admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ url('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
         </div>
-      </div> -->
+      </div>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -30,6 +29,7 @@
           </div>
         </div>
       </div>
+
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -45,55 +45,47 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Books</p>
+                  <p>Dashboard v1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Borrower</p>
+                  <p>Dashboard v2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Employees</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item menu-open">
-            <a href="{{ url('/book') }}" class="nav-link active">
-              <i class="fa-solid fa-book"></i>
-              <p>
-                 Books
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ url('/book') }}" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List of Books</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ url('/create') }}" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Book</p>
+                  <p>Dashboard v3</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="public/Admin/pages/widgets.html" class="nav-link ">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Features
-                <span class="right badge badge-danger">New</span>
-              </p>
+            <a href="{{ url('admin/dashboard') }}" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/admin/list') }}" class="nav-link">
+                <i class="nav-icon far fa-user"></i>
+                <p>Admin</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('/admin/user/index') }}" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
+                <p>User</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/book/index') }}" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>Books</p>
             </a>
           </li>
         </ul>

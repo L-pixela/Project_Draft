@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Models\Book;
 
@@ -8,11 +9,11 @@ class BookController extends Controller
 {
     public function index(){
         $books = Book::all();
-        return view('Book.index', ['books' => $books]);
+        return view('Admin.book.index',['books' => $books]);
     }
 
     public function create(){
-        return view('Book.create');
+        return view('Admin.book.create');
     }
 
     public function store(Request $request){
@@ -31,7 +32,7 @@ class BookController extends Controller
     }
 
     public function edit(Book $book){
-        return view('Book.edit', ['book' => $book]);
+        return view('Admin.book.edit', ['book' => $book]);
     }
 
     public function update(Book $book, Request $request){
@@ -52,5 +53,5 @@ class BookController extends Controller
 
         return redirect(route('book.index'))->with('msg','Book is Deleted Successfully!');
     }
-    
+
 }
